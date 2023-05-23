@@ -1,4 +1,5 @@
 import argparse
+import pathlib
 
 
 def parse_args():
@@ -28,6 +29,10 @@ def parse_args():
 
     # Parse the arguments
     args = parser.parse_args()
+
+    # If input_dir and output_dir shouldn't be the same.
+    if pathlib.Path(args.input) == pathlib.Path(args.output):
+        parser.error("--input ({}) and --output ({}) should be different!".format(args.input, args.output))
 
     # Return the arguments
     return args

@@ -197,6 +197,6 @@ def delete_files_with_extension(path: str | Path, extensions: set[str]):
         assert file.is_file()
         if file.suffix in extensions:
             file.unlink()
-        deleted_files.append(file)
+            deleted_files.append(file)
 
     return deleted_files
