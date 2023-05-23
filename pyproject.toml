@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+known_first_party = [""]
+
+[project]
+name = "arxivify"
+version = "0.0.0"
+authors = [{name="Oswin So", email="oswinso@gmail.com"}]
+description = "LaTeX cleaner for submitting to arXiv."
+readme = "README.md"
+
+[project.scripts]
+arxivify = "arxivify.main:main"
